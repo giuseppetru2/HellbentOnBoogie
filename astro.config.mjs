@@ -6,6 +6,6 @@ import solidJs from "@astrojs/solid-js";
 export default defineConfig({
   integrations: [tailwind(), solidJs()],
   server: {
-    port: process.env.PORT || 4321,
-  }
+    port: import.meta.env.PORT || 4321,
+  },
 });
