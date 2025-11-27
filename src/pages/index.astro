@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Synopsis from '../components/Synopsis.astro';
+import ReviewQuotes from '../components/ReviewQuotes.astro';
+import Gallery from '../components/Gallery';
+import WhereToWatch from '../components/WhereToWatch.astro';
+import Reviews from '../components/Reviews.astro';
+import Socials from '../components/Socials.astro';
+---
+
+<Layout title="Hellbent on Boogie | Official Movie Site">
+	<main>
+		<Hero />
+		<Synopsis />
+		<ReviewQuotes />
+		<Gallery client:visible />
+		<WhereToWatch />
+		<Reviews />
+		<Socials />
+	</main>
+</Layout>

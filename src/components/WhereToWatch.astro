@@ -1,0 +1,64 @@
+---
+const platforms = [
+  { 
+    name: 'Tubi', 
+    url: 'https://link.tubi.tv/TVhquMpcCYb', 
+    image: '/WhereToWatchImages/tubi.png'
+  },
+  { 
+    name: 'Amazon Prime', 
+    url: 'https://www.amazon.com/Hellbent-Boogie-Vito-Trupiano/dp/B0F31PSBLF', 
+    image: '/WhereToWatchImages/amazonPrimeVideo.png'
+  },
+  { 
+    name: 'Apple TV', 
+    url: 'https://tv.apple.com/us/movie/hellbent-on-boogie/umc.cmc.7c86cjrxm6z7oqhfpxi2fqwjt',
+    image: '/WhereToWatchImages/appleTv.png'
+  },
+  { 
+    name: 'Plex', 
+    url: 'https://watch.plex.tv/movie/hellbent-on-boogie',
+    image: '/WhereToWatchImages/plex.jpg'
+  },
+  { 
+    name: 'YouTube Movies', 
+    url: 'https://youtu.be/id2y_aXdFj0',
+    image: '/WhereToWatchImages/youtube.png'
+  },
+  { 
+    name: 'XUMO Play', 
+    url: 'https://play.xumo.com/networks/gravitas-movies/99991312',
+    image: '/WhereToWatchImages/xumo.jpg'
+  },
+  { 
+    name: 'DVD / Blu-ray', 
+    url: 'https://www.amazon.com/Hellbent-Boogie-DVD-Vito-Trupiano/dp/B0F2X3NL14',
+    image: '/WhereToWatchImages/DVDPrime.jpg'
+  }
+];
+---
+
+<section id="watch" class="py-20 bg-black/20 text-white backdrop-blur-sm">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-heading text-center mb-12 text-white">Where to Watch</h2>
+    
+    <!-- Streaming Platforms Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+      {platforms.map((platform) => (
+        <a 
+          href={platform.url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex items-center justify-center p-6 rounded-lg border border-white/20 bg-black/40 hover:bg-white/10 hover:border-brand-yellow hover:scale-105 transition-all duration-300 group shadow-lg aspect-video"
+          aria-label={platform.name}
+        >
+          <img 
+            src={platform.image} 
+            alt={platform.name} 
+            class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

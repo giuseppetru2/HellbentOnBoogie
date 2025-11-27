@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Hellbent on Boogie - A film by Vito Trupiano" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="text-white font-sans antialiased selection:bg-brand-yellow selection:text-white relative min-h-screen">
+		<!-- Global Background Gradient -->
+		<div class="fixed inset-0 z-[-2] bg-gradient-to-b from-[#F3C969] via-[#D88279] to-[#8B4A75]"></div>
+		
+		<!-- Film Grain Overlay -->
+		<div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 217, 4, 41;
+		--accent-light: 255, 100, 100;
+		--accent-dark: 150, 0, 0;
+	}
+	html {
+		background: #101010;
+		scroll-behavior: smooth;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Anton', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+</style>

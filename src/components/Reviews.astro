@@ -1,0 +1,71 @@
+---
+const reviews = [
+  { name: 'Rotten Tomatoes', url: 'https://www.rottentomatoes.com/m/hellbent_on_boogie', color: 'hover:text-[#FA320A]' },
+  { name: 'Letterboxd', url: 'https://letterboxd.com/film/hellbent-on-boogie/', color: 'hover:text-[#00E054]' },
+  { name: 'IMDb', url: 'https://www.imdb.com/title/tt17500428/?ref_=ext_shr_lnk', color: 'hover:text-[#F5C518]' },
+];
+---
+
+<section id="reviews" class="py-20 bg-black/40 text-white border-t border-white/10 backdrop-blur-sm">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl md:text-5xl font-heading mb-12">Reviews & Press</h2>
+    
+    <div class="flex flex-wrap justify-center gap-8 mb-16">
+      {reviews.map((review) => (
+        <a 
+          href={review.url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class={`text-2xl md:text-3xl font-bold text-gray-400 transition-colors ${review.color} underline decoration-2 underline-offset-8 decoration-gray-700 hover:decoration-current`}
+        >
+          {review.name}
+        </a>
+      ))}
+    </div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <!-- Director Interview -->
+      <div>
+        <h3 class="text-2xl font-heading mb-6 text-brand-yellow">Director Interview</h3>
+        <div class="aspect-video rounded-lg overflow-hidden shadow-2xl border border-gray-800">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/ka2TbjR_tTs" 
+            title="Director Interview" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Podcast Interview -->
+      <div>
+        <h3 class="text-2xl font-heading mb-6 text-brand-yellow">Podcast Interview</h3>
+        <div class="aspect-video rounded-lg overflow-hidden shadow-2xl border border-gray-800 bg-black/50 flex flex-col">
+          <iframe 
+            src="https://www.buzzsprout.com/1996398/18249282-sibling-bonds-autism-and-pure-heart-a-talk-with-the-cast-director-of-this-year-s-indie-gem-hellbent-on-boogie?client_source=small_player&iframe=true" 
+            loading="lazy" 
+            width="100%" 
+            height="200" 
+            frameborder="0" 
+            scrolling="no" 
+            title="Hellbent on Boogie Podcast Interview"
+            class="w-full flex-grow"
+          ></iframe>
+          <div class="p-4 text-center border-t border-white/10">
+            <a 
+              href="https://www.buzzsprout.com/1996398/episodes/18249282-sibling-bonds-autism-and-pure-heart-a-talk-with-the-cast-director-of-this-year-s-indie-gem-hellbent-on-boogie" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-brand-yellow hover:text-white transition-colors font-bold uppercase tracking-wider text-sm"
+            >
+              Listen on Buzzsprout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
