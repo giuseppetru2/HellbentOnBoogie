@@ -1,0 +1,16 @@
+import{d as f,c as w,g as c,a as $,i as p,b as _,m as k,e as v,r as m,t as n,s,F as j}from"./web.DONdWTBH.js";var G=n(`<section class="py-20 bg-black/20 overflow-hidden backdrop-blur-sm"><div class="container mx-auto px-4 mb-8"><h2 class="text-4xl md:text-5xl font-heading text-white">Gallery</h2></div><div class="w-full overflow-x-auto pb-8 px-4 scrollbar-custom"><div class="flex gap-4 min-w-max"></div></div><!$><!/><style>
+          .scrollbar-custom::-webkit-scrollbar {
+            height: 8px;
+          }
+          .scrollbar-custom::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 4px;
+          }
+          .scrollbar-custom::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+          }
+          .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+            background: #F5C518;
+          }
+        `),P=n('<div class="relative group overflow-hidden cursor-pointer h-64 md:h-80 aspect-[3/2] md:aspect-[16/9] rounded-lg border border-gray-800 flex-shrink-0"><img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-brand-yellow/0 group-hover:bg-brand-yellow/20 transition-colors duration-300 flex items-center justify-center"><span class="opacity-0 group-hover:opacity-100 text-white font-heading text-xl tracking-widest transition-opacity duration-300 drop-shadow-lg">VIEW'),H=n('<div class="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm"><div class="relative max-w-7xl max-h-[90vh] w-full flex items-center justify-center"><img alt="Gallery Fullscreen"class="max-w-full max-h-[90vh] object-contain shadow-2xl border border-gray-800 rounded-sm"><button class="absolute -top-12 right-0 text-white hover:text-brand-yellow text-4xl font-bold transition-colors">&times;');const B=[{src:"/GallerySection/HOB Still.jpg",alt:"Hellbent on Boogie Still"},{src:"/GallerySection/HOB Still 2.jpg",alt:"Movie Still 2"},{src:"/GallerySection/HOB Still 7.jpg",alt:"Movie Still 7"},{src:"/GallerySection/HOB Still 9.jpg",alt:"Movie Still 9"},{src:"/GallerySection/HOB Still 12.jpg",alt:"Movie Still 12"},{src:"/GallerySection/HOB Still 14.jpg",alt:"Movie Still 14"},{src:"/GallerySection/HOB Still 16.jpg",alt:"Movie Still 16"},{src:"/GallerySection/_PAV0915 copy.jpg",alt:"Production Still 1"},{src:"/GallerySection/_PAV0948 copy.jpg",alt:"Production Still 2"},{src:"/GallerySection/_PAV1041 copy.jpg",alt:"Production Still 3"},{src:"/GallerySection/_PAV1652 copy.jpg",alt:"Production Still 4"},{src:"/GallerySection/_PAV1724 copy.jpg",alt:"Production Still 5"},{src:"/GallerySection/_PAV2012 copy.jpg",alt:"Production Still 6"}];function C(){const[d,a]=w(null);return(()=>{var o=c(G),x=o.firstChild,u=x.nextSibling,S=u.firstChild,h=u.nextSibling,[b,y]=$(h.nextSibling);return b.nextSibling,p(S,_(j,{each:B,children:e=>(()=>{var t=c(P),r=t.firstChild;return t.$$click=()=>a(e.src),v(l=>{var i=e.src,g=e.alt;return i!==l.e&&s(r,"src",l.e=i),g!==l.t&&s(r,"alt",l.t=g),l},{e:void 0,t:void 0}),m(),t})()})),p(o,(()=>{var e=k(()=>!!d());return()=>e()&&(()=>{var t=c(H),r=t.firstChild,l=r.firstChild,i=l.nextSibling;return t.$$click=()=>a(null),i.$$click=()=>a(null),v(()=>s(l,"src",d())),m(),t})()})(),b,y),o})()}f(["click"]);export{C as default};
