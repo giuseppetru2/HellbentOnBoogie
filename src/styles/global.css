@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-yellow: #F5C518;
+    --color-brand-dark: #101010;
+    --color-brand-gray: #2b2d42;
+
+    --font-sans: "Inter", sans-serif;
+    --font-heading: "Anton", sans-serif;
+}
